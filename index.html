@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>for taniya ✨</title>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Handlee&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- floating background -->
+  <div class="float" style="left:10%; animation-delay:0s;">🌹</div>
+  <div class="float" style="left:30%; animation-delay:3s;">💖</div>
+  <div class="float" style="left:55%; animation-delay:1s;">✨</div>
+  <div class="float" style="left:75%; animation-delay:4s;">🌙</div>
+
+  <!-- MAIN SCREEN -->
+  <div class="content" id="screen">
+    <h1>heyyyyyyyy taniyyaaaaaa 💖</h1>
+    <h2>i have something for you… wanna see?</h2>
+
+    <div class="buttons">
+      <button class="yes" onclick="showGift()">yes 😊</button>
+      <button class="no" onclick="goNo()">no 😳</button>
+    </div>
+  </div>
+
+  <!-- GIFT OVERLAY -->
+  <div id="giftOverlay">
+
+    <div class="dim"></div>
+
+    <!-- CENTER VIDEO -->
+    <video
+      id="giftVideo"
+      src="gift.mp4"
+      playsinline
+    ></video>
+
+    <!-- BOUQUET + TEXT -->
+    <div class="overlay-content">
+
+      <img
+        id="bouquet"
+        src="bouquet.png"
+        alt="cat holding bouquet"
+      >
+
+      <div id="giftText">
+        <p class="line black">i don’t know what your favourite flowers are</p>
+        <p class="line pink">so i got you these 🌸</p>
+        <p class="line black">hope you like it</p>
+
+        <button id="continueBtn">continue</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* ===============================
+   RESET & BASE
+   =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+body {
+  background: #fff7ef;
+  font-family: 'Handlee', cursive;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===============================
+   MAIN CONTAINER (JHUMKA SCENE)
+   =============================== */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  z-index: 5;
+  transition: opacity 1.5s ease;
+}
+
+/* ===============================
+   JHUMKA IMAGE
+   =============================== */
+
+#jhumka {
+  width: 132px;
+  max-width: 70vw;
+  height: auto;
+
+  transform: rotate(20deg);
+  animation: sway 3s ease-in-out infinite;
+
+  margin-bottom: 28px;
+}
+
+@keyframes sway {
+  0%   { transform: rotate(18deg); }
+  50%  { transform: rotate(24deg); }
+  100% { transform: rotate(18deg); }
+}
+
+/* ===============================
+   TEXT
+   =============================== */
+
+.text p {
+  font-size: 18px;
+  margin: 12px 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  color: #333;
+}
+
+/* ===============================
+   BUTTON
+   =============================== */
+
+#smileBtn {
+  margin-top: 26px;
+  padding: 12px 24px;
+
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+
+  background: #ff8fb1;
+  color: white;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ===============================
+   CONFETTI
+   =============================== */
+
+.confetti {
+  position: fixed;
+  top: -20px;
+
+  width: 6px;
+  height: 22px;
+  border-radius: 2px;
+
+  opacity: 0.95;
+  animation: fall linear infinite;
+
+  z-index: 8;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* ===============================
+   FIREWORKS CANVAS
+   =============================== */
+
+#fireworks {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* ===============================
+   FINAL NEW YEAR TEXT
+   =============================== */
+
+#newYearText {
+  position: fixed;
+  top: 35%;
+  width: 100%;
+
+  text-align: center;
+  padding: 0 16px;
+
+  font-family: 'Sacramento', cursive;
+  font-size: clamp(42px, 10vw, 56px);
+  color: #ff3d81;
+
+  opacity: 0;
+  z-index: 9;
+  transition: opacity 1s ease;
+}
+
+#cuteText {
+  display: block;
+  margin-top: 18px;
+
+  font-size: clamp(26px, 7vw, 36px);
+  color: #ff6fae;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ===============================
+   FLOATING HEARTS
+   =============================== */
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+
+  font-size: 22px;
+  opacity: 0.8;
+
+  animation: floatUp 8s linear infinite;
+
+  z-index: 7;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
